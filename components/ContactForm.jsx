@@ -86,7 +86,7 @@ export default function ContactForm({toemail}) {
       toEmail: toemail,
     }
     try {
-      const res = await fetch('https://portfolio-pkq2623be-milinds-projects-e74c3925.vercel.app/api/send', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
